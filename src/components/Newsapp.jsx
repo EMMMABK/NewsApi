@@ -29,8 +29,8 @@ const Newsapp = () => {
       <nav>
         <div className="trend_news">Trend News</div>
         <ul>
-            <a href="#">All News</a>
-            <a href="#">Trending</a>
+            <a href="https://www.allbanglanewspaper.xyz/">All News</a>
+            <a href="https://apnews.com/hub/trending-news">Trending</a>
         </ul>
         <div className="searchBar">
             <input type="text" placeholder='Search News' value={search} onChange={handleInput}/>
