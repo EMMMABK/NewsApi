@@ -2,6 +2,10 @@ import React from 'react'
 import Card from './Card'
 
 const Newsapp = () => {
+    const API_KEY = 'API_KEY'
+    const getData = async() => {
+        const response = await fetch(`https://newsapi.org/v2/everything?q=tesla&apiKey=${API_KEY}`)
+    }
   return (
     <div>
       <nav>
