@@ -1,6 +1,6 @@
-# Trend News App
+# NEWS API
 
-Welcome to the **Trend News App**, a web application where you can stay up-to-date with the latest news in various categories. Whether you're interested in **sports**, **politics**, **entertainment**, **health**, or **fitness**, this app provides you with real-time news articles fetched from an API. You can easily search for news topics and click "Read More" to get the full article.
+Welcome to the **News API**, a web application where you can stay up-to-date with the latest news in various categories. Whether you're interested in **sports**, **politics**, **entertainment**, **health**, or **fitness**, this app provides you with real-time news articles fetched from an API. You can easily search for news topics and click "Read More" to get the full article.
 
 ## Features
 
