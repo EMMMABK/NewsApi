@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Card from './Card'
 
 const Newsapp = () => {
@@ -12,10 +12,18 @@ const Newsapp = () => {
         setNewsData(jsonData.articles)
     }
 
+    useEffect(() => {
+        getData()
+    }, [])
+
     const handleInput = (e) => {
         console.log(e.target.value);
         setSearch(e.target.value)
     }
+    const userInput = (event) => {
+        setSearch(event.target.value)
+    }
+
   return (
     <div>
       <nav>
@@ -25,7 +33,7 @@ const Newsapp = () => {
             <a href="#">Trending</a>
         </ul>
         <div className="searchBar">
-            <input type="text" placeholder='Search News' onChange={handleInput}/>
+            <input type="text" placeholder='Search News' value={search} onChange={handleInput}/>
             <button className='btn_for_search' onClick={getData}>Search</button>
         </div>
       </nav>
@@ -33,11 +41,11 @@ const Newsapp = () => {
         <p className='head'>Stay Update with Trend News</p>
       </div>
       <div className="categoryBtn">
-        <button className='category_btn_choose'>Sports</button>
-        <button className='category_btn_choose'>Politics</button>
-        <button className='category_btn_choose'>Entertainment</button>
-        <button className='category_btn_choose'>Health</button>
-        <button className='category_btn_choose'>Fitness</button>
+        <button onClick={userInput} value='sports' className='category_btn_choose'>Sports</button>
+        <button onClick={userInput} value='politics' className='category_btn_choose'>Politics</button>
+        <button onClick={userInput} value='entertainment' className='category_btn_choose'>Entertainment</button>
+        <button onClick={userInput} value='health' className='category_btn_choose'>Health</button>
+        <button onClick={userInput} value='fitness' className='category_btn_choose'>Fitness</button>
       </div>
 
       <div className="cards">
