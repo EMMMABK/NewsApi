@@ -3,12 +3,13 @@ import Card from './Card'
 
 const Newsapp = () => {
     const [search, setSearch] = useState("usa") 
-
-    const API_KEY = 'API_KEY'
+    const [newsData, setNewsData] = useState(null)
+    const API_KEY = 'API'
     const getData = async() => {
         const response = await fetch(`https://newsapi.org/v2/everything?q=${search}&apiKey=${API_KEY}`)
         const jsonData = await response.json()
-        console.log(jsonData);
+        console.log(jsonData.articles);
+        setNewsData(jsonData.articles)
     }
 
     const handleInput = (e) => {
@@ -40,7 +41,7 @@ const Newsapp = () => {
       </div>
 
       <div className="cards">
-        <Card/>
+        <Card data={newsData}/>
       </div>
     </div>
   )
