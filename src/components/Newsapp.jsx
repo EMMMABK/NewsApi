@@ -10,6 +10,11 @@ const Newsapp = () => {
         const jsonData = await response.json()
         console.log(jsonData);
     }
+
+    const handleInput = (e) => {
+        console.log(e.target.value);
+        setSearch(e.target.value)
+    }
   return (
     <div>
       <nav>
@@ -19,7 +24,7 @@ const Newsapp = () => {
             <a href="#">Trending</a>
         </ul>
         <div className="searchBar">
-            <input type="text" placeholder='Search News'/>
+            <input type="text" placeholder='Search News' onChange={handleInput}/>
             <button className='btn_for_search' onClick={getData}>Search</button>
         </div>
       </nav>
