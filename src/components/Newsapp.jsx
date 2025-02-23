@@ -5,6 +5,8 @@ const Newsapp = () => {
     const API_KEY = 'API_KEY'
     const getData = async() => {
         const response = await fetch(`https://newsapi.org/v2/everything?q=tesla&apiKey=${API_KEY}`)
+        const jsonData = response.json()
+        console.log(jsonData);
     }
   return (
     <div>
@@ -16,7 +18,7 @@ const Newsapp = () => {
         </ul>
         <div className="searchBar">
             <input type="text" placeholder='Search News'/>
-            <button className='btn_for_search'>Search</button>
+            <button className='btn_for_search' onClick={getData}>Search</button>
         </div>
       </nav>
       <div className="">
