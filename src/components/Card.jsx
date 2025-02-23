@@ -1,4 +1,5 @@
 import React from 'react'
+import './css/styles.css';
 
 const Card = ({data}) => {
     console.log(data);

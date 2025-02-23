@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import Card from './Card'
+import './css/styles.css';
+
 
 const Newsapp = () => {
     const [search, setSearch] = useState("usa") 
