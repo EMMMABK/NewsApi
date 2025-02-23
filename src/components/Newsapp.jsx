@@ -41,7 +41,7 @@ const Newsapp = () => {
       </div>
 
       <div className="cards">
-        <Card data={newsData}/>
+        {newsData? <Card data={newsData}/> : null}
       </div>
     </div>
   )
