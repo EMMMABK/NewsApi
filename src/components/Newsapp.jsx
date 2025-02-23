@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 
 const Newsapp = () => {
   return (
@@ -14,7 +15,9 @@ const Newsapp = () => {
             <button>Search</button>
         </div>
       </nav>
-
+      <div className="">
+        <p>Stay Update with Trend News</p>
+      </div>
       <div className="categoryBtn">
         <button>Sports</button>
         <button>Politics</button>
@@ -24,7 +27,7 @@ const Newsapp = () => {
       </div>
 
       <div className="">
-
+        <Card/>
       </div>
     </div>
   )
