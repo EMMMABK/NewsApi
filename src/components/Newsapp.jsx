@@ -12,21 +12,21 @@ const Newsapp = () => {
         </ul>
         <div className="searchBar">
             <input type="text" placeholder='Search News'/>
-            <button>Search</button>
+            <button className='btn_for_search'>Search</button>
         </div>
       </nav>
       <div className="">
-        <p>Stay Update with Trend News</p>
+        <p className='head'>Stay Update with Trend News</p>
       </div>
       <div className="categoryBtn">
-        <button>Sports</button>
-        <button>Politics</button>
-        <button>Entertainment</button>
-        <button>Health</button>
-        <button>Fitness</button>
+        <button className='category_btn_choose'>Sports</button>
+        <button className='category_btn_choose'>Politics</button>
+        <button className='category_btn_choose'>Entertainment</button>
+        <button className='category_btn_choose'>Health</button>
+        <button className='category_btn_choose'>Fitness</button>
       </div>
 
-      <div className="">
+      <div className="cards">
         <Card/>
       </div>
     </div>
