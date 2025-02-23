@@ -5,7 +5,7 @@ const Newsapp = () => {
     const API_KEY = 'API_KEY'
     const getData = async() => {
         const response = await fetch(`https://newsapi.org/v2/everything?q=tesla&apiKey=${API_KEY}`)
-        const jsonData = response.json()
+        const jsonData = await response.json()
         console.log(jsonData);
     }
   return (
